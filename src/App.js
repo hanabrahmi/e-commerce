@@ -11,7 +11,7 @@ import Indexe from "./indexe"
 import  {BrowserRouter,Routes,Route} from "react-router-dom"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import LoginRegister from './Inscription/login_register';
-
+import AddProduct from './Add_product/Add_product'
 import heroImg1 from './img/hero-img-1.jpg';
 import heroImg2 from './img/hero-img-2.jpg';
 import heroImg3 from './img/hero-img-3.jpg';
@@ -24,7 +24,8 @@ function App() {
       <>
       <BrowserRouter>
       <Routes>
-        <Route path="/" element={<LoginRegister />} />
+        <Route path="/loginregister" element={<LoginRegister />} />
+        <Route path="/add" element={< AddProduct/>} />
         {/* Ajoutez d'autres routes ici si nécessaire */}
       </Routes>
     </BrowserRouter>
@@ -68,7 +69,7 @@ function App() {
                                 </div>
                                 <a href="shop.html" className="nav-item nav-link">Promotion</a>
                                 <a href="contact.html" className="nav-item nav-link">Avantage</a>
-                                <a href="shop-detail.html" className="nav-item nav-link">nouveau petite entreprise </a>
+                                <a href="shop-detail.html" className="nav-item nav-link">Nouveau produit </a>
                             </div>
                             <div className="d-flex m-3 me-0 justify-content-center">
                                 <button className="btn-search btn border border-secondary btn-md-square rounded-circle bg-white mx-2" data-bs-toggle="modal" data-bs-target="#searchModal"><i className="fas fa-search text-primary"></i></button>
@@ -79,9 +80,10 @@ function App() {
                                 <a href="#" className="my-auto mx-2 ">
                                     <i className="fa fa-heart fa-2x"></i>
                                 </a>
-                                <a href="#" className="my-auto mx-2">
-                                    <i className="fa fa-user fa-2x"></i>
+                                <a href="/loginregister" className="my-auto mx-2">
+                                <i className="fa fa-user fa-2x" onClick={() => window.location.href = '/loginregister'}></i>
                                 </a>
+
                             </div>
                         </div>
                     </nav>
