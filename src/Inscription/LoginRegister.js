@@ -1,8 +1,5 @@
 import React, { useRef } from 'react';
-
 import './style.css'; 
-import { Modal } from 'react-bootstrap';
-
 function LoginRegister(show, handelClose) { 
   const loginRef = useRef(null);
   const registerRef = useRef(null);
@@ -19,15 +16,8 @@ function LoginRegister(show, handelClose) {
     if (registerRef.current) registerRef.current.style.left = "450px";
     if (btnRef.current) btnRef.current.style.left = "0";
   };
-  
-
   return (
 <>
-<Modal show={show} >
-<Modal.Header closeButton>
-          
-        </Modal.Header>
-  <Modal.Body>
       <div className="hero">
 
         <div className="form-box">
@@ -42,6 +32,7 @@ function LoginRegister(show, handelClose) {
             <input type="checkbox" className="check-box" /><span>Remember password</span>
             <button type="submit" className="submit-btn">Log In</button>
           </form>
+          <div className="register-style">
           <form id="register" className="input-group" ref={registerRef}>
             <input type="text" className="input-field" placeholder="Nom de l'utilisateur" required />
             <input type="text" className="input-field" placeholder="Presom de l'utilisateur" required />
@@ -54,15 +45,15 @@ function LoginRegister(show, handelClose) {
             <input type="text" className="input-field" placeholder="Ville " required />
             
             <div class="check-box-container">
-    <input type="checkbox" class="check-box" />
-    <span>I agree to the terms and conditions</span>
-</div>
+            <input type="checkbox" class="check-box" />
+ <span>I agree to the terms and conditions</span>
+            </div>
             <button type="submit" className="submit-btn">Register</button>
           </form>
+          </div>
         </div>
       </div>
-      </Modal.Body>
-      </Modal>
+
       </>
   );
 }

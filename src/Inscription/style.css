@@ -113,11 +113,13 @@ span{
 #register{
     left: 450px;
 }
-.form-box{
+.form-box {
     width: 380px;
     height: 800px;
     position: relative;
-    margin: 0% auto;
+    margin: 20px auto; /* Adjust margin as needed */
     background: #fff;
     overflow: hidden;
-}
+    top: 150px; /* Adjust this value to move the form lower */
+  }
+  

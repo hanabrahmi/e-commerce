@@ -1,0 +1,65 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.text {
+  flex: 1;
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+}
+
+.step-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #81C408;
+  color: #fff;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.step h2 {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+}
+
+.step p {
+  margin: 5px 0 0;
+  font-size: 16px;
+  color: #666;
+}
+
+.image {
+  flex: 1;
+  
+}
+
+.image img {
+  width: 100%;
+  height: auto;
+  border-radius: 30px;
+ 
+}
+
+
+.text h1 {
+  margin-bottom: 50px; /* Augmente la distance entre h1 et les éléments suivants */
+}
+
+
