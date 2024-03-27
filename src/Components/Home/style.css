@@ -1,3 +1,7 @@
+.pos-footer {
+    display: flex;
+    justify-content: space-evenly;
+}
 .hero-header {
     background: linear-gradient(rgba(248, 223, 173, 0.1), rgba(248, 223, 173, 0.1)), url(./assets/hero-img.jpg);
     background-position: center center;
@@ -69,4 +73,26 @@
 
 .carousel-inner .carousel-item:not(.active) img {
     opacity: 0;
+}
+.featurs .featurs-item .featurs-icon {
+    position: relative;
+    width: 120px;
+    height: 120px;
+}
+
+.featurs .featurs-item .featurs-icon::after {
+    content: "";
+    width: 35px;
+    height: 35px;
+    background: var(--bs-secondary);
+    position: absolute;
+    bottom: -10px;
+    transform: translate(-50%);
+    transform: rotate(45deg);
+    background: var(--bs-secondary);
+    
+}
+.container {
+    display: flex;
+    justify-content: space-evenly;
 }

@@ -2,11 +2,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+ 
 }
-
+.mt-140{
+  margin-top:140px ;
+}
 .text {
-  flex: 1;
+  flex: 1.5;
 }
 
 .steps {
@@ -21,12 +23,12 @@
 }
 
 .step-circle {
-  width: 40px;
-  height: 40px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   background-color: #81C408;
   color: #fff;
-  font-size: 18px;
+  font-size: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -41,18 +43,18 @@
 
 .step p {
   margin: 5px 0 0;
-  font-size: 16px;
+  font-size: 14px;
   color: #666;
 }
 
 .image {
-  flex: 1;
+  flex:0.8;
   
 }
 
 .image img {
-  width: 100%;
-  height: auto;
+  width: 140%;
+  height: 100%;
   border-radius: 30px;
  
 }

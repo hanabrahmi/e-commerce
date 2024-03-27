@@ -94,7 +94,7 @@
 }
 
 .navbar {
-    height: 100px;
+    height: 50px;
     border-bottom: 1px solid rgba(255, 255, 255, .1);
 }
 
@@ -144,3 +144,6 @@
 #searchModal .modal-content {
     background: rgba(255, 255, 255, .8);
 }
+.mt-140{
+    margin-top:140px ;
+  }
