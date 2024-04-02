@@ -11,6 +11,7 @@ import Home from './Components/Home/homepage';
 import Conditions from './Components/StepsComponent/StepsComponent'
 import Categorie from './categorie/CategoryPage'
 import Cart from  './Components/Cart/Cart'
+import Admin from './AdminDashboard/Admin'
 function App() {
   return (
     <div>
@@ -24,6 +25,7 @@ function App() {
         <Route path="/categorie" element={<Categorie />}/>
         <Route path='/cart' element = {<Cart/>} />
         <Route path="/add" element={< AddProductPage/>} />
+        <Route path='/admin' element = {<Admin/>}/>  
 
       </Routes>
       

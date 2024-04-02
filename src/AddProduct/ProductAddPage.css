@@ -1,58 +1,170 @@
-.product-add-container {
+.mt-140{
+  margin-top:140px ;
+}
+.product-add-page {
+  position: relative;
+}
+.test1 {
+  border: 1px solid gray;
+  box-shadow: 10px 10px 5px gray;
+  width: 170%;
+  padding: 20px;
+  margin-right: 10px;
+  margin-left: 20px ;
+}
+
+.test2 {
+  border: 1px solid gray;
+  box-shadow: 10px 10px 5px gray;
+  width: 170%;
+  padding: 20px;
+  margin-left: 10px;
+  margin-right: 20px;
+}
+
+.test3 {
+  border: 1px solid gray;
+  box-shadow: 10px 10px 5px gray;
+  width: 70%;
+  padding: 20px;
+  margin-right: 200px;
+  margin-left: 200px ;
+  margin-top: 30px;
+}
+.rectangle-image {
+  width: 100%;
+  width: 1300px;
+  height: 300px;
+}
+.titre {
+  color: #f8ac07;
+  font-size: 2.5em;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px #aaa;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  height: 20vh; /* 60% de la hauteur de la vue */
+}
+.titre1{
+  color: #f8ac07; 
+  font-weight: bold;
+  text-shadow: 2px 2px 4px #aaa;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.7em;
+  margin-left: 5px;
+}
+
+@keyframes beatFade {
+  0% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.05); }
+  100% { opacity: 1; transform: scale(1); }
+}
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+.fa-brands{
+  color: #81C408; 
+ }
+
+.fa-solid{
+ color: #81C408; 
+}
+.product-add-container {
+  margin-right: 10px; 
+  padding: 20px;
 }
 
 .image-upload-container {
   display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
+  flex-wrap: wrap;
 }
-
-.image-upload-box {
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 10px;
-  margin: 0 10px;
+.test12{
   display: flex;
-  flex-direction: column;
-  align-items: center;
+ justify-content: space-between;
+ 
+}
+.image-upload-box {
+  flex: 0 0 50%; /* Définissez la largeur des cases de téléchargement d'image à 50% pour afficher deux par ligne */
+  padding: 10px;
 }
 
 .image-upload-label {
-  font-size: 14px;
-  color: #555;
+  display: block;
+  padding: 10px;
+  text-align: center;
   cursor: pointer;
-  margin-top: 5px;
+  background-color: #81C408;
+  color: #fff;
 }
 
 .image-instruction {
-  font-size: 12px;
-  color: #777;
-  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.required-text {
+  color: red;
+}
+
+.image-container {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+}
+
+.uploaded-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .input-field {
-  width: 300px;
-  height: 40px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  margin-bottom: 10px; /* Updated value for more space */
-  padding: 10px;
-  font-size: 16px;
-  box-sizing: border-box;
-  
+  width: 100%;
+  margin-bottom: 10px;
 }
 
 .submit-button {
-  width: 150px;
-  height: 40px;
-  border-radius: 5px;
-  background-color: #4CAF50;
-  color: white;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #81C408;
+  color: #fff;
   border: none;
+  border-radius: 5px;
   cursor: pointer;
-  font-size: 16px;
-  margin-top: 10px;
+  display: block; /* Pour centrer le bouton */
+  margin: 0 auto; /* Pour centrer le bouton */
+  margin-top: 20px;
+
+  /* Transition pour l'effet 3D */
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: orange; /* Couleur orange au survol */
+}
+
+.submit-button:active {
+  transform: translateY(2px); /* Effet 3D lors du clic */
+}
+
+
+.titre-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px; /* Ajoutez un espacement en bas si nécessaire */
 }

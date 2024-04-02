@@ -1,4 +1,83 @@
-.mb-3 {
+/* Pour aligner les éléments les uns sous les autres */
+.container {
     display: flex;
     flex-direction: column;
+  }
+  
+  /* Pour espacer les éléments verticalement */
+  .container > * {
+    margin-bottom: 20px;
+  }
+  
+  /* Pour aligner les éléments à droite dans la dernière section */
+  .row.justify-content-end {
+    justify-content: flex-end;
+  }
+  
+  /* Pour ajuster l'espace entre les éléments */
+  .col-8 {
+    flex: 0 0 66.666667%;
+    max-width: 66.666667%;
+  }
+  
+  /* Pour ajuster le style de la carte de total */
+  .bg-light.rounded {
+    background-color: #f8f9fa;
+    border-radius: 0.25rem;
+  }
+  
+  /* Pour aligner le texte du total à droite */
+  .py-4.mb-4.border-top.border-bottom.d-flex.justify-content-between {
+    text-align: right;
+  }
+.mt-140{
+    margin-top:140px ;
+  } 
+  /* ShoppingCart.css */
+
+.cart-container {
+    
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .cart-summary h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .cart-summary h5 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .cart-summary p {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  .total-amount {
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .checkout-button {
+    background-color: #28a745;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+.cart-pos {
+    display: flex;
+    justify-content: end;
 }
