@@ -30,7 +30,7 @@ function LoginRegister({show, handelClose}) {
     
     const dispatch = useDispatch();
     const [loginDetails, setLoginDetails] = useState({
-      email: "",
+      nom: "",
       password: "",
     });
     const handleChange = (e) => {
@@ -93,7 +93,11 @@ function LoginRegister({show, handelClose}) {
             
             <input name='code_postal'type="text " className="input-field" placeholder="Code Postal" required onChange={handleChangeRegister} />
             <input name='ville'type="text" className="input-field" placeholder="Ville " required onChange={handleChangeRegister} />
-            
+            <label for="role">Choisissez un rôle :</label>
+                <select id="role" name="role" required onChange={handleChangeRegister}>
+                    <option value="admin">Administrateur</option>
+                    <option value="abonne">Abonné</option>
+                </select>
             <div class="check-box-container">
             <input type="checkbox" class="check-box" />
               <span>I agree to the terms and conditions</span>

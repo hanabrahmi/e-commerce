@@ -2,16 +2,16 @@ const express = require("express");
 const router = express.Router();
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
- const User = require("../models/User");
+const Admin = require("../models/Admin");
 router.post("/register", async (req, res) => {
     try {
-      const { nom,prenom, email, password,numero_telephone,adresse,code_postal,ville } = req.body;
+      const { nom,prenom, email, password,numero_telephone,adresse,code_postal,ville ,role} = req.body;
       bcrypt.hash(password, 12, async (err, hash) => {
         if (err) {
           res.status(500).json({ status: false, message: err });
         } else if (hash) {
-          const user = await User.create({
-            nom,prenom, email,numero_telephone,adresse,code_postal,ville,
+          const admin = await Admin.create({
+            nom,prenom, email,numero_telephone,adresse,code_postal,ville,role,
             password: hash,
           });
           res.status(201).json({
@@ -30,16 +30,16 @@ router.post("/register", async (req, res) => {
   router.post("/login", async (req, res) => {
     try {
       const { email, password } = req.body;
-      const findUser = await User.findOne({ email: email });
-      if (findUser) {
-        bcrypt.compare(password, findUser.password).then(function (result) {
+      const findAdmin = await Admin.findOne({ email: email });
+      if (findAdmin) {
+        bcrypt.compare(password, findAdmin.password).then(function (result) {
           if (result == true) {
             jwt.sign(
               {
-                username: findUser.username,
-                email: findUser.email,
-                role: findUser.role,
-                _id: findUser._id,
+                adminname: findAdmin.adminname,
+                email: findAdmin.email,
+                role: findAdmin.role,
+                _id: findAdmin._id,
               },
               "secretkey",
               {

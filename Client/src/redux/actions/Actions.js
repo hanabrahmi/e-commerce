@@ -14,7 +14,7 @@ export const login = ({loginDetails,navigate}) => (dispatch) => {
     .then((response) =>
     {
       dispatch({ type: LOGIN_USER, payload: response.data.data });
-navigate("/dashboard");
+        navigate("/AdminDashboard/Admin");
     }
     )
     .catch((err) => {
