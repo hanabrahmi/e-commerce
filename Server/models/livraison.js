@@ -23,12 +23,6 @@ const livraisonSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  code_suivi: {
-    type: String,
-  },
-  remarques: {
-    type: String,
-  },
 });
 
 const Livraison = mongoose.model('Livraison', livraisonSchema);

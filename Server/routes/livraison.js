@@ -19,8 +19,7 @@ router.post('/', async (req, res) => {
     date_livraison: req.body.date_livraison,
     statut_livraison: req.body.statut_livraison,
     adresse_livraison: req.body.adresse_livraison,
-    code_suivi: req.body.code_suivi,
-    remarques: req.body.remarques
+    
   });
 
   try {

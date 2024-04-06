@@ -85,14 +85,40 @@ function LoginRegister({show, handelClose}) {
           <div className="register-style">
           <form id="register" className="input-group" ref={registerRef}>
             <input name="nom"type="text" className="input-field" placeholder="Nom de l'utilisateur" required onChange={handleChangeRegister}/>
-            <input name="prenom"type="text" className="input-field" placeholder="Presom de l'utilisateur" required onChange={handleChangeRegister} />
+            <input name="prenom"type="text" className="input-field" placeholder="Prenom de l'utilisateur" required onChange={handleChangeRegister} />
             <input name='email' type="email" className="input-field" placeholder="e-mail" required onChange={handleChangeRegister} />
             <input name='password'type="password" className="input-field " placeholder="mot de passe" required onChange={handleChangeRegister} />
             <input name='numero_telephone'type="number" className="input-field" placeholder="Numero de telephone" required onChange={handleChangeRegister} />
             <input name='adresse' type="text" className="input-field" placeholder="Votre Adresse" required onChange={handleChangeRegister} />
             
             <input name='code_postal'type="text " className="input-field" placeholder="Code Postal" required onChange={handleChangeRegister} />
-            <input name='ville'type="text" className="input-field" placeholder="Ville " required onChange={handleChangeRegister} />
+            <select className="input-field" required name='ville' onChange={handleChangeRegister}>
+                <option value="">Sélectionnez une ville</option>
+                <option value="Ariana">Ariana</option>
+                <option value="Béja">Béja</option>
+                <option value="Ben Arous">Ben Arous</option>
+                <option value="Bizerte">Bizerte</option>
+                <option value="Gabès">Gabès</option>
+                <option value="Gafsa">Gafsa</option>
+                <option value="Jendouba">Jendouba</option>
+                <option value="Kairouan">Kairouan</option>
+                <option value="Kasserine">Kasserine</option>
+                <option value="Kébili">Kébili</option>
+                <option value="Le Kef">Le Kef</option>
+                <option value="Mahdia">Mahdia</option>
+                <option value="La Manouba">La Manouba</option>
+                <option value="Médenine">Médenine</option>
+                <option value="Monastir">Monastir</option>
+                <option value="Nabeul">Nabeul</option>
+                <option value="Sfax">Sfax</option>
+                <option value="Sidi Bouzid">Sidi Bouzid</option>
+                <option value="Siliana">Siliana</option>
+                <option value="Sousse">Sousse</option>
+                <option value="Tataouine">Tataouine</option>
+                <option value="Tozeur">Tozeur</option>
+                <option value="Tunis">Tunis</option>
+                <option value="Zaghouan">Zaghouan</option>
+            </select>
             <label for="role">Choisissez un rôle :</label>
                 <select id="role" name="role" required onChange={handleChangeRegister}>
                     <option value="admin">Administrateur</option>

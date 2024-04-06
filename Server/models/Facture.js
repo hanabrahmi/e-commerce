@@ -11,6 +11,11 @@ const factureSchema = new mongoose.Schema({
     ref: 'Commande', // Référence vers le modèle Commande
     required: true,
   },
+  id_abonee : {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Abonee", // Référence vers le modèle Abonne,
+    required : true,
+  },
   date_facture: {
     type: Date,
     required: true,
@@ -23,13 +28,7 @@ const factureSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  informations_facturation: {
-    type: String,
-    required: true,
-  },
-  remarques: {
-    type: String,
-  },
+  
 });
 
 const Facture = mongoose.model('Facture', factureSchema);

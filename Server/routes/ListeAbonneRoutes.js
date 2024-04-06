@@ -16,11 +16,8 @@ router.get('/', async (req, res) => {
 router.post('/', async (req, res) => {
   const listeAbonne = new ListeAbonne({
     id_abonne: req.body.id_abonne,
-    date_abonnement: req.body.date_abonnement,
-    forfait: req.body.forfait,
-    date_expiration: req.body.date_expiration,
     statut: req.body.statut,
-    informations_complementaires: req.body.informations_complementaires
+   
   });
 
   try {

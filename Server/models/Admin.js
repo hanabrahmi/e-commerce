@@ -18,28 +18,6 @@ const AdminSchema = new mongoose.Schema({
         required : true,
         unique :  true,
     },
-    numero_telephone : {
-        type : Number,
-        required : true,
-        unique : true,
-    },
-    adresse : {
-        type : String,
-        required : true,
-    }, 
-    code_postal : {
-        type : String,
-        required : true,
-    },
-    ville : {
-        type : String,
-        required : true,
-    },
-    role: {
-        type: String,
-        enum: ['admin', 'abonne'], // Définissez les valeurs autorisées pour le rôle
-        required: true
-    }
     }
 );
 const Admin = mongoose.model("Admin",AdminSchema) ;

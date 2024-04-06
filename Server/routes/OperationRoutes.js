@@ -15,9 +15,10 @@ router.get('/', async (req, res) => {
 // Route pour créer une nouvelle opération
 router.post('/', async (req, res) => {
   const operation = new Operation({
-    type: req.body.type,
-    article: req.body.article,
+    id_operation: req.body.id_operation,
+    id_article: req.body.id_article,
     quantite: req.body.quantite,
+    date: req.body.date,
   });
 
   try {

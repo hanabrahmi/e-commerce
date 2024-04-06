@@ -3,9 +3,17 @@ const article = require ('../models/article');
 const Router = express.Router();
 Router.post("/article", async (req,res) => {
     try {
-        const  { nom} = req.body;
+        const  { photo1 , photo2, nom_article,description_article,etat_article,prix_article,prix_net,categorie,option} = req.body;
         const newArticle = await article.create ({
-           nom
+           photo1: req.body.photo1,
+           photo2: req.body.photo2,
+           nom_article : req.body.nom_article,
+           description_article : req.body.description_article,
+           etat_article : req.body.etat_article,
+           prix_article : req.body.prix_article,
+           prix_net : req.body.prix_net,
+           categorie : req.body.categori,
+           option   : req.body.option,
         });
         res.status(201).json({msg: "Article created ! ", data:newArticle});
     } catch (error) {

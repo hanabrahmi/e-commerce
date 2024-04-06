@@ -16,11 +16,11 @@ router.get('/', async (req, res) => {
 router.post('/', async (req, res) => {
   const facture = new Facture({
     id_commande: req.body.id_commande,
+    id_abonee: req.body.id_abonee,
     date_facture: req.body.date_facture,
     montant_total: req.body.montant_total,
     methode_paiement: req.body.methode_paiement,
-    informations_facturation: req.body.informations_facturation,
-    remarques: req.body.remarques
+    
   });
 
   try {

@@ -17,7 +17,7 @@ router.post('/', async (req, res) => {
   const commission = new Commission({
     id_commande: req.body.id_commande,
     montant: req.body.montant,
-    statut: req.body.statut,
+  
   });
 
   try {

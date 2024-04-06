@@ -28,11 +28,12 @@ const userSchema = new mongoose.Schema({
         required : true,
     }, 
     code_postal : {
-        type : String,
+        type : Number,
         required : true,
     },
     ville : {
         type : String,
+        enum : ['Ariana', 'Béja', 'Ben Arous ','Bizerte','Gabès','Gafsa','Jendouba','Kairouan','Kasserine','Kébili','Le Kef','Mahdia','La Manouba', 'Médnine','Monastir','Nabeul','Sfax','Sidi Bouzid','Siliana','Sousse','Tataouine','Tozeur','Tunis','Zaghouan'],
         required : true,
     },
     role: {

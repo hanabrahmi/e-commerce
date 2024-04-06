@@ -47,10 +47,7 @@
     cursor: pointer;
 }
 
-.active{
-    background: var(--activeItem);
-    margin-left: 0;
-}
+
 
 .active::before{
     content: "";

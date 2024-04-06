@@ -67,18 +67,18 @@ const ProductAddPage = () => {
 
   return (
     <div className="product-add-page mt-140">
-      <img src={rectangleImage} alt="Rectangle Image" className="rectangle-image" />
+      <img src={rectangleImage} alt="Rectangle Image" className="rectangle-image" name = "photo1" />
       <div className="product-add-container">
       <div className="titre-container">
   <i className="fa-solid fa-cart-plus fa-3x" style={{ animation: 'bounce 1s infinite' }}></i>
-  <h1 className="titre">Ajouter ton produit</h1>
+  <h1 className="titre">Ajouter Ton Article </h1>
   </div>
 
        <div className='test12'>               
  <div className='test1'>
  <div className="titre-container">
  <i className="fa-solid fa-camera-retro fa-2x" style={{ animation: 'beatFade 1s infinite' }}></i>
-  <h1 className='titre1'>ajouter 2 photos : </h1>
+  <h1 className='titre1'>Ajouter 2 photos : </h1>
   </div>
         <div className="image-upload-container">
           {Array.from({ length: 2 }, (_, index) => (
@@ -90,6 +90,7 @@ const ProductAddPage = () => {
                 hidden
                 accept="image/*"
                 required
+                
               />
               <label htmlFor={`image-upload-${index}`} className="image-upload-label">
                 Cliquez pour sélectionner
@@ -115,17 +116,18 @@ const ProductAddPage = () => {
           <div className='test2'>
           <div className="titre-container">
  <i className="fa-solid fa-user-pen fa-2x" style={{ animation: 'beatFade 1s infinite' }}></i>
-  <h1 className='titre1'>Information personnel : </h1>
+  <h1 className='titre1'>Information Personnel : </h1>
   </div>
 
-          <input type="text" className="input-field" placeholder="Nom de l'utilisateur" required />
-          <input type="text" className="input-field" placeholder="Prenom de l'utilisateur " required />
+          <input type="text" className="input-field" placeholder="Nom de l'utilisateur" required name='nom' />
+          <input type="text" className="input-field" placeholder="Prenom de l'utilisateur " required name='prenom' />
           <input
           type="email"
           className="input-field"
           placeholder="E-mail"
           onChange={(e) => handleEmailChange(e.target.value)} // Appel de la fonction handleEmailChange sur chaque modification de l'e-mail
           required
+          name='email'
         />
          {emailError && (
           <div className="alert alert-danger" role="alert">
@@ -138,6 +140,7 @@ const ProductAddPage = () => {
           placeholder="Numéro de téléphone"
           onChange={(e) => handlePhoneChange(e.target.value)}
           required
+          name='numero_telephone'
         />
          {/* Utilisez l'alerte Bootstrap pour afficher le message d'erreur pour le numéro de téléphone */}
          {phoneError && (
@@ -146,7 +149,7 @@ const ProductAddPage = () => {
           </div>
         )}
 
-<select className="input-field" required>
+<select className="input-field" required name='ville'>
   <option value="">Sélectionnez une ville</option>
   <option value="Ariana">Ariana</option>
   <option value="Béja">Béja</option>
@@ -174,13 +177,14 @@ const ProductAddPage = () => {
   <option value="Zaghouan">Zaghouan</option>
 </select>
 
-          <input type="text" className="input-field" placeholder=" Votre Address" required />
+          <input type="text" className="input-field" placeholder=" Votre Address" required name='adresse'/>
           <input
           type="text"
           className="input-field"
           placeholder="Code postal "
           onChange={(e) => handlePostalCodeChange(e.target.value)}
           required
+          name='code_postal'
         />
         {postalCodeError && (
           <div className="alert alert-danger" role="alert">
@@ -194,18 +198,19 @@ const ProductAddPage = () => {
 <div className='test3'>
 <div className="titre-container">
  <i className="fa-brands fa-product-hunt fa-2x" style={{ animation: 'beatFade 1s infinite' }}></i>
-  <h1 className='titre1'>Information du produit : </h1>
+  <h1 className='titre1'>Information D'Article : </h1>
   </div>
-          <input type="text" className="input-field" placeholder="Nom produit" required />
+          <input type="text" className="input-field" placeholder="Nom Article" required name='nom_article'/>
           <input
             type="text"
             className="input-field"
-            placeholder="Description du produit  "
+            placeholder="Description D'Article  "
             required
+            name='description_article'
           />
           
-          <select className="input-field" required>
-  <option value="">Sélectionnez l'état du produit</option>
+          <select className="input-field" required  name='etat_article'>
+  <option value="">Sélectionnez L'état D'Article</option>
   <option value="Mauvais">Mauvais</option>
   <option value="Moyen">Moyen</option>
   <option value="Bon">Bon</option>
@@ -217,9 +222,10 @@ const ProductAddPage = () => {
 <input
           type="number"
           className="input-field"
-          placeholder="Prix  produit"
+          placeholder="Prix  Article"
           onChange={(e) => handlePriceChange(e.target.value)}
           required
+          name='prix_article'
         />
         {priceError && (
           <div className="alert alert-danger" role="alert">
@@ -233,10 +239,11 @@ const ProductAddPage = () => {
           value={commission}
           readOnly // Empêche l'édition directe de la valeur
           required
+          name='prix_net'
         />
         
-          <select className="input-field"  value={category} onChange={(e) => handleCategoryChange(e.target.value)}>
-            <option value="">catégorie</option>
+          <select className="input-field"  value={category} onChange={(e) => handleCategoryChange(e.target.value)} name='categorie'>
+            <option value="">Catégorie</option>
             <option value="vêtement">Vêtement</option>
             <option value="vaisselle">Vaisselle</option>
             <option value="véhicule">Véhicule</option>
@@ -245,7 +252,7 @@ const ProductAddPage = () => {
           </select>
           {category && (
             <select className="input-field"  value={subCategory} onChange={(e) => handleSubCategoryChange(e.target.value)}>
-              <option value=""> sous-catégorie</option>
+              <option value=""> Sous-catégorie</option>
               {category === 'vêtement' && (
                 <>
                   <option value="chemises">Bjous</option>
@@ -278,13 +285,13 @@ const ProductAddPage = () => {
                 <>
                   <option value="ordinateurs">informatiques et électroniques</option>
                   <option value="imprimantes">électroménagères</option>
-                  <option value="téléphones">ventilation et climatisation</option>
+                  <option value="téléphones">Ventilation et climatisation</option>
                 </>
               )}
             </select>
           )}
 
-<select className="input-field" value={locationOption} onChange={(e) => handleLocationOptionChange(e.target.value)}>
+<select className="input-field" value={locationOption} onChange={(e) => handleLocationOptionChange(e.target.value)} name='option'>
           <option value="">Choisissez une option</option>
           <option value="Vente">À vendre</option>
           <option value="Location">En location</option>
@@ -304,7 +311,7 @@ const ProductAddPage = () => {
 
         </div>
         <button type="submit" className="submit-button">
-          Ajout Product
+          Ajout Article
         </button>
       </div>
     </div>

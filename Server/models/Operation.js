@@ -1,14 +1,15 @@
 const mongoose = require('mongoose');
 
 const operationSchema = new mongoose.Schema({
-  type: {
-    type: String,
-    enum: ['Vente', 'Achat', 'Location'],
-    required: true,
-  },
-  article: {
+  id_operation: {
     type: mongoose.Schema.Types.ObjectId,
-    refPath: 'type', // Référence dynamique vers le modèle correspondant au type d'opération
+    required: true,
+    unique: true,
+  },
+  
+ id_article: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref:'articles', // Référence de la table article 
     required: true,
   },
   quantite: {
